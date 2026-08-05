@@ -1,0 +1,10 @@
+{
+  "excalibrain:excalibrain-start-popout": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "]"
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+/* Sets all the text color to red! */
+.excalibrain-warning {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-normal);
+}
+
+.excalibrain-prompt-center {
+  text-align: center;
+}
+
+.excalibrain-contentEl div.Island,
+.excalibrain-contentEl button.help-icon {
+  display:none;
+}
+
+.excalibrain-contentEl {
+  overflow: hidden !important;
+  position: relative;
+}
+
+/* -----------
+   TOOLS PANEL
+  ------------ */
+.excalibrain-toolspanel-wrapper {
+  z-index: 3;
+  position: absolute;
+  top: 0.8em; /* Чуть больше воздуха сверху */
+  padding-left: 0.8em;
+  width: 100%;
+  padding-right: 0.8em;
+  pointer-events: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.excalibrain-dropdown-wrapper,
+.excalibrain-buttons {
+  pointer-events: none;
+  margin-top: 0.3em;
+  max-width: 37em;
+  justify-content: space-between;
+}
+
+.excalibrain-searchinput {
+  width: 26em;
+  vertical-align: middle;
+  pointer-events: all;
+  /* Japandi: мягкие границы и фон для поля ввода */
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.04);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.excalibrain-searchinput:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.excalibrain-buttons {
+  margin-left: -0.3em;
+  display: flex;
+  float: right;
+  flex: 1 0 30em;
+}
+
+.excalibrain-toolspanel-divider {
+  width: 1px; /* Тонкая линия вместо толстой черты */
+  background-color: rgba(0, 0, 0, 0.08);
+  margin-left: 0.5em;
+  margin-right: 0.2em;
+}
+
+.excalibrain-button {
+  pointer-events: all;
+  vertical-align: middle;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  margin-left: 0.3em !important;
+  margin-right: 0px !important;
+  width: 2.4em !important;
+  height: 2.4em !important; /* Квадратные кнопки для строгости */
+  justify-content: center !important;
+  border-radius: 4px; /* Мягкие, но строгие углы */
+  border: 1px solid transparent;
+  box-shadow: none;
+  background-color: transparent;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Плавный переход */
+}
+
+.excalibrain-button.off {
+  background-color: rgba(0, 0, 0, 0.03); /* Очень легкий серый */
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.excalibrain-button.on {
+  background-color: var(--color-primary-darker);
+  color: var(--text-on-accent);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.excalibrain-button:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* Мягкая тень парения */
+}
+
+.excalibrain-button:active {
+  transform: translateY(1px); /* Тактильный отклик */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.excalibrain-button.disabled {
+  background-color: rgba(0, 0, 0, 0.02);
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* -----------
+     HISTORY
+  ------------ */
+
+.excalibrain-history-wrapper {
+  z-index: 3;
+  position: absolute;
+  bottom: 0px;
+  padding-left: 7rem;
+  padding-bottom: 12px;
+  width: 100%;
+  padding-right: 12px;
+  overflow: hidden;
+}
+
+.excalibrain-history-container {
+  overflow-y: hidden;
+  display: -webkit-box;
+  overflow-x: scroll;
+  padding: 4px 8px; /* Внутренний воздух */
+  border-radius: 4px;
+  /* Полупрозрачный матовый фон вместо темного пластика */
+  background-color: rgba(240, 235, 228, 0.6); 
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.excalibrain-history-divider {
+  /* Замена золота на мягкий терракотово-бежевый */
+  color: #b09480; 
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: smaller;
+}
+
+.excalibrain-history-item {
+  cursor: pointer;
+  /* Замена серебра на теплый антрацит/графит */
+  color: #5c5550; 
+  font-size: smaller;
+  transition: color 0.2s ease;
+}
+
+.excalibrain-history-item:hover {
+  color: #3a3530; /* Чуть темнее при наведении */
+}
+
+/* -----------
+    SETTINGS
+  ------------ */
+.excalibrain-settings-folding-L1 {
+  font-size: large;
+  font-weight: 600; /* Чуть легче для скандинавской типографики */
+  color: var(--text-title-h3);
+  letter-spacing: 0.02em;
+}
+
+.excalibrain-settings-h1 {
+  color: var(--text-title-h1);
+  font-weight: 600;
+}
+
+.excalibrain-setting-style-section {
+  padding-left: 20px;
+  /* Тонкая текстура вместо жирной линии */
+  border-left: 2px solid rgba(0, 0, 0, 0.08); 
+}
+
+.excalibrain-settings-demoimg {
+  max-width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.excalibrain-setting-nameEl {
+  min-width: 10em;
+  max-width: 20em;
+}
+
+.excalibrain-setting-descEl {
+  min-width: 10em;
+  max-width: 20em;
+}
+
+.excalibrain-setting-controlEl {
+  width: 90%;
+}  
+
+.excalibrain-settings-colorlabel {
+  padding-right: 8px;
+  min-width: 3em;
+}
+
+.excalibrain-settings-colorpicker {
+  max-width: 32px;
+  min-width: 32px;
+  width: 32px !important;
+  border-radius: 50%; /* Круглые пикеры цвета для органичности */
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.excalibrain-settings-opacitylabel {
+  padding-right: 5px;
+  padding-left: 10px;
+  min-width: 5em;
+}
+
+.excalibrain-settings-sliderlabel {
+  min-width: 2em;
+  text-align: right;
+}
+
+.excalibrain-settings-toggle {
+  min-width: 2em;
+  margin-right: 5px;
+}
+
+.excalibrain-dropdown-wrapper {
+  display: inline-flex;
+}
+
+/* -----------
+   MULTISELECT
+  ------------ */
+.multiselect-container {
+  padding-left: 0.3em;
+  width:14.2em;
+  pointer-events: all;
+}
+
+.multiselect-container * {
+  box-sizing:border-box;
+}
+
+.multiselect-container .multiselect-header {
+  width:100%;
+  margin-bottom:8px;
+}
+
+.multiselect-container .multiselect-wrapper {
+  position:relative;
+  width:100%;
+  height:34px; /* Чуть выше для удобства */
+  background: rgba(0,0,0,0.02);
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+  display:flex;
+  align-items:center;
+  padding:0 10px;
+  cursor:pointer;
+  transition: border-color 0.2s ease;
+}
+
+.multiselect-container .multiselect-wrapper:hover {
+  border-color: rgba(0,0,0,0.2);
+}
+
+.multiselect-container .multiselect-wrapper:after {
+  content:"";
+  position:absolute;
+  width:7px;
+  height:7px;
+  right:14px;
+  top:10px;
+  border-right:2px solid var(--text-muted);
+  border-top:2px solid var(--text-muted);
+  transform:rotate(135deg);
+  transform-origin:center center;
+  transition:all .2s ease-in-out;
+}
+
+.multiselect-container .multiselect-wrapper .selected-value {
+  padding-right:30px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  color: var(--text-normal);
+}
+
+.multiselect-container .multiselect-wrapper .options-wrapper {
+  position:absolute;
+  top:calc(100% + 4px); /* Воздух между кнопкой и списком */
+  left:0;
+  width:100%;
+  max-height:300px;
+  overflow:auto;
+  background-color: var(--background-secondary);
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06); /* Мягкая, объемная тень */
+  display:none;
+  flex-direction:column;
+  padding: 4px 0;
+}
+
+.multiselect-container .multiselect-wrapper .option:hover {
+  cursor:pointer;
+  background-color:rgba(0,0,0,0.04);
+}
+
+.multiselect-container .multiselect-wrapper .option-text {
+  display:none;
+  padding:8px 12px;
+  border-radius: 2px;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper {
+  display:flex;
+  align-items:center;
+  min-height:19px;
+  position:relative;
+  padding:8px 12px 8px 36px;
+  cursor:pointer;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper .checkbox-checkmark {
+  position:absolute;
+  top:8px;
+  left:8px;
+  height:18px;
+  width:18px;
+  background-color: transparent;
+  border-radius: 3px;
+  border:1px solid rgba(0,0,0,0.25);
+  transition: all 0.2s ease;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper:hover .checkbox-checkmark {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper .checkbox-checkmark:after {
+  content:'';
+  position:absolute;
+  display:none;
+  left:5px;
+  top:1px;
+  width:5px;
+  height:9px;
+  border:solid white;
+  border-width:0 2px 2px 0;
+  transform:rotate(45deg);
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper input {
+  position:absolute;
+  opacity:0;
+  cursor:pointer;
+  height:0;
+  width:0;
+}
+
+/* Japandi accent: мягкий шалфейно-зеленый вместо яркого синего */
+.multiselect-container .multiselect-wrapper .checkbox-wrapper input:checked ~ .checkbox-checkmark {
+  background-color: #7a8b7a; 
+  border-color: #7a8b7a;
+}
+
+.multiselect-container .multiselect-wrapper .checkbox-wrapper input:checked ~ .checkbox-checkmark:after {
+  display:block;
+}
+
+.multiselect-container .multiselect-wrapper.single-select .checkbox-wrapper {
+  display:none;
+}
+
+.multiselect-container .multiselect-wrapper.single-select .option-text {
+  display:block;
+}
+
+.multiselect-container .multiselect-wrapper.single-select .option-text.selected {
+  /* Тот же приглушенный акцент для текста */
+  background-color: rgba(122, 139, 122, 0.15); 
+  color: #5a6b5a;
+}
+
+.multiselect-container .multiselect-wrapper.opened:after {
+  top:12px;
+  transform:rotate(315deg);
+}
+
+.multiselect-container .multiselect-wrapper.opened .options-wrapper {
+  display:flex;
+}

@@ -1,0 +1,273 @@
+{
+  "main": {
+    "id": "d775cc4142d4e22f",
+    "type": "split",
+    "children": [
+      {
+        "id": "1be139adfa872451",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f1284cf6833e8799",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/SpringSecurity/ProviderManager.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ProviderManager"
+            }
+          },
+          {
+            "id": "daba25359b7ea998",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/SpringSecurity/FilterChainProxy.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "FilterChainProxy"
+            }
+          },
+          {
+            "id": "1a484f82a9ccf60d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/SpringSecurity/UserDetailsService.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "UserDetailsService"
+            }
+          },
+          {
+            "id": "5b1c55f0bcfe13bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/SpringSecurity/SecurityConfig.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SecurityConfig"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1f0e3f41155d4d9e",
+    "type": "split",
+    "children": [
+      {
+        "id": "332b56e2752faf5a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5a5044a292416610",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d4b0443f1cf04d96",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "cd94fd7c2fd52c79",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bbd08bc240db9d43",
+    "type": "split",
+    "children": [
+      {
+        "id": "76bd78c5a62f44f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4fe3665cb83d8387",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "bffb3f5376a1bb84",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "WEB/Servlet/Servlet.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Servlet"
+            }
+          },
+          {
+            "id": "10f704ced1f3f99b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "46a664d39a311ada",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0526d6d2886a8afd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Spring/SpringSecurity/SecurityConfig.md",
+                "followCursor": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of SecurityConfig"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "5b1c55f0bcfe13bf",
+  "lastOpenFiles": [
+    "Spring/SpringSecurity/UserDetailsService.md",
+    "Spring/SpringSecurity/SecurityConfig.md",
+    "Spring/SpringSecurity/Untitled.md",
+    "Spring/SpringSecurity/FilterChainProxy.md",
+    "Spring/SpringSecurity/AuthManager.md",
+    "Spring/SpringSecurity/AuthProvider.md",
+    "Spring/SpringSecurity/Principal.md",
+    "Spring/SpringSecurity/SecurityContext.md",
+    "Spring/SpringSecurity/SecurityContextHolder.md",
+    "Spring/SpringSecurity/PasswordEncoder.md",
+    "Spring/SpringSecurity/OAuth2Provider.md",
+    "Spring/SpringSecurity/DAOAuthProvider.md",
+    "Spring/SpringSecurity/ProviderManager.md",
+    "Spring/SpringSecurity/additionalFilters().md",
+    "Spring/SpringSecurity/Security Filter.md",
+    "Spring/SpringSecurity/SecurityFilterChain.md",
+    "Spring/SpringSecurity/DelegatingFilterProxy.md",
+    "Spring/SpringSecurity/FilterBean.md",
+    "WEB/Servlet/ServletContainer.md",
+    "WEB/Servlet/Apache Tomcat.md",
+    "WEB/Servlet/Servlet.md",
+    "WEB/Servlet/Servlet filter.md",
+    "WEB/Servlet/ServletContext.md",
+    "Spring/SpringMVC/ApplicationContext.md",
+    "excalibrain.md",
+    "Architect/IoC Container.md",
+    "Spring/SpringSecurity",
+    "Spring/SpringMVC/DispatcherServlet/Handlers",
+    "Untitled.canvas",
+    "Excalidraw",
+    "Untitled 1.base",
+    "Untitled.base",
+    "Img/Socket/Pasted image 20260609114341.png",
+    "Img/Socket/Pasted image 20260609112723.png",
+    "Img/Socket/Pasted image 20260609112648.png",
+    "Img/Servlet/Pasted image 20260609121341.png",
+    "Spring/SpringMVC/View",
+    "Spring/SpringMVC/DispatcherServlet",
+    "Spring/SpringMVC/Root",
+    "WEB/Core",
+    "Spring/SpringMVC"
+  ]
+}
