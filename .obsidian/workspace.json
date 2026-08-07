@@ -13,44 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/Architect/Domain-Driven-Design/Domain-Driven Design.md",
+                "file": "CS/Architect/UML/Component diagram.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Domain-Driven Design"
-            }
-          },
-          {
-            "id": "a5c0f17c17a2ec8b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CS/Architect/Domain-Driven-Design/Domain-Driven Design.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Domain-Driven Design"
-            }
-          },
-          {
-            "id": "13096ac5dd8c3fb9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CS/Architect/SOLID/SOLID.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SOLID"
+              "title": "Component diagram"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -215,17 +186,31 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "13096ac5dd8c3fb9",
+  "active": "4566e9adca7de423",
   "lastOpenFiles": [
+    "CS/Architect/UML/Class diagram.md",
+    "CS/Architect/UML/UML.md",
+    "CS/Architect/UML/Component diagram.md",
+    "Pasted image 20260807141732.png",
+    "Pasted image 20260807133940.png",
+    "Pasted image 20260807133931.png",
+    "Pasted image 20260807133851.png",
+    "Pasted image 20260807133834.png",
+    "Pasted image 20260807133820.png",
+    "Pasted image 20260807133746.png",
+    "Pasted image 20260807133657.png",
+    "Pasted image 20260807133637.png",
+    "CS/Architect/UML/Class-diaram1.excalidraw.md",
+    "Pasted image 20260807125446.png",
+    "CS/Architect/GRASP.md",
     "CS/Architect/SOLID/Dependency Inversion Principle.md",
     "CS/Architect/Domain-Driven-Design/Domain-Driven Design.md",
-    "Pasted image 20260805160634.png",
-    "Pasted image 20260805160621.png",
-    "Pasted image 20260805160244.png",
+    "().md",
+    "CS/Architect/UML",
+    "CS/Architect/SOLID/SOLID.md",
     "CS/Architect/Domain-Driven-Design/Domain-Driven-Deign2.excalidraw.md",
     "CS/Architect/Domain-Driven-Design/Domain-Driven-Design1.excalidraw.md",
     "Excalidraw",
-    "Pasted image 20260805144941.png",
     "CS/Deploy/Docker.md",
     "CS/Architect/DI.md",
     "CS/Architect/Domain-Driven-Design",
@@ -235,34 +220,19 @@
     "CS/Architect/Handler.md",
     "CS/Deploy/CD.md",
     "CS/Spring/Annotations/@Bean.md",
-    "CS/Architect/GRASP.md",
     "CS/Architect/HANDLERImg.excalidraw.md",
-    "antenna(1).png",
-    "gear.png",
-    "antenna.png",
-    "cctv-camera(1).png",
-    "viewpoint.png",
-    "cctv-camera.png",
     "CS/Spring/SpringMVC/DispatcherServlet/DispatcherServlet.md",
     "CS/Spring/SpringMVC/DispatcherServlet/Handlers/Handle Object.md",
     "CS/WEB/Servlet/Servlet filter.md",
     "CS/WEB/Core/Web page.md",
     "CS/WEB/Servlet/Servlet.md",
-    "CS/WEB/Servlet/Apache Tomcat.md",
-    "CS/Deploy/CI.md",
-    "CS/Architect/IoC Container.md",
-    "CS/Architect/Service Locator.md",
-    "CS/Architect/IoC.md",
-    "2026-06-22.md",
     "Android",
-    "CS/WEB/Servlet/ServletContext.md",
     "CS/Untitled.canvas",
     "CS/Untitled 1.base",
     "CS/Untitled.base",
     "CS/Spring/Annotations",
     "CS/Spring/SpringMVC/View",
     "CS/Spring/SpringMVC/DispatcherServlet/Handlers",
-    "CS/Spring/SpringMVC/Root",
-    "CS/Spring/SpringMVC/DispatcherServlet"
+    "CS/Spring/SpringMVC/Root"
   ]
 }

@@ -1,152 +1,95 @@
 ---
 tags: [architect]
 ---
+#### Что это и зачем?
+GRASP (General Responsibility Assingment Software Patterns) - это набор паттернов который позволяет делать более красивый, поддреживаемый, понятный код. 
 
-# GRASP
+В отличие от всех других паттернов, GRASP это скорее про назначение обязанностей и отвественностей классам.
 
-**GRASP (General Responsibility Assignment Software Patterns)** — набор паттернов для распределения обязанностей между классами в объектно-ориентированном проектировании. Описаны Крейгом Ларманом.
+Состоит из следующих элементов:
 
-В отличие от паттернов GoF, GRASP не описывает конкретную структуру классов, а отвечает на вопрос: *"Какие обязанности и какому классу следует назначить?"*
+#### Information Expert
+Если объект обладает всей или большей частью информации - то именно ему и поручают задачу
 
-## Паттерны
+#### Creator
+Создавать объекты должен только тот, кто обладает всеми необходимыыми для создания ресурсами. По-сути выполняется Information Expert, частный случай
 
-### Information Expert
+#### Low Coupling
+Объекты должны быть слабо связанны между собой.
 
-Обязанность назначается классу, владеющему нужными для её выполнения данными. Снижает количество "пересылок" данных между объектами.
+#### High Coherison
+Сложные объекты должны разбиваться на мелкие. Не должно быть божественных объектов. Высокая связанность обязанностей внутри компонента. 
+Сначала кажется что появляется противоречие с низкой связностью, но это скорее про то что чего стоит избегать (god-object), чем инструкция к действию
 
-```java
-// Information Expert — класс Order сам считает сумму, т.к. владеет items
-class Order {
-    private List<Item> items;
-    public BigDecimal total() {
-        return items.stream().map(Item::price).reduce(ZERO, BigDecimal::add);
-    }
-}
-// НЕ: OrderService.total(order) — он вынужден вытащить items из order
+Вообще Low Coupling и High Coherison это прям [[Domain-Driven Design#Bounded Context|Bounded Context]] из [[Domain-Driven Design]]
+
+#### Pure Fabrication
+Если не знаешь под обязанности входит задача - создай новый класс под эту задачу. 
+По-сути создание классов только ради архитектурной красоты
+
+#### Inderection
+Создание промежуточных объктов, прослоек, оберток
+
+#### Controller
+GRASP-паттерн _Controller_ отвечает на вопрос:
+
+> Кто первым получает внешние события и координирует поведение системы?
+
+Это может быть любой компонент, стоящий на границе системы: HTTP-контроллер, gRPC endpoint, CLI-команда, Kafka-консьюмер. Он принимает входные данные, определяет сценарий и делегирует выполнение вглубь архитектуры. Именно поэтому Controller называют паттерном _первого звена координации_.
+
+Важно понимать: Controller — это не конкретный слой и не конкретный фреймворк-специфичный компонент. Это **архитектурная роль**, задача которой — грамотно разрулить вход и передать его туда, где будет происходить настоящее действие.
+
+#### Polymorphism
+отвечает на вопрос:
+
+> Как проектировать поведение, которое должно различаться в зависимости от типа объекта?
+
+Решение: Вынеси поведение в абстракцию — и пусть каждый тип реализует свое.
+
+Пример без полиморфизма:
+
+```
+if (shape instanceof Circle) {    ((Circle) shape).draw();} else if (shape instanceof Rectangle) {    ((Rectangle) shape).draw();}
 ```
 
-### Creator
+Пример с полиморфизмом:
 
-Класс `B` должен создавать объекты класса `A`, если `B` агрегирует/содержит `A`, использует `A` или владеет данными для инициализации `A`.
-
-```java
-// Order содержит OrderItems → Order создаёт их
-class Order {
-    private List<OrderItem> items = new ArrayList<>();
-    public void addItem(Product p, int qty) {
-        items.add(new OrderItem(p, qty)); // Order — Creator для OrderItem
-    }
-}
+```
+interface Shape { void draw(); }class Circle implements Shape {    public void draw() { ... }}
 ```
 
-### Controller
+Преимущества:
 
-Выделенный класс-посредник между UI и бизнес-логикой. Принимает входные события и делегирует их в предметную область, не содержа сам бизнес-логику.
+- убираешь условную логику (`if`, `switch`);
+    
+- код становится расширяемым без изменений в старом;
+    
+- достигаешь принципа OCP — _open for extension, closed for modification_.
 
-```java
-// Controller — посредник между UI и доменом, не содержит бизнес-логику
-public class OrderController {
-    private final OrderService service; // делегирует в домен
-    public void onCreate(OrderForm form) {
-        service.create(form); // бизнес-логика — в OrderService
-    }
-}
-```
+#### Protected Variations
+Если _Polymorphism_ — это механизм, то _Protected Variations_ — **архитектурная цель**.
 
-### Low Coupling
+> Как защитить компоненты системы от изменений в других частях?
 
-Минимизация связанности между классами. Чем меньше класс знает о других, тем проще его изменять и переиспользовать.
+**Суть:**
 
-```java
-// Высокая связанность
-class Report {
-    private JdbcDataSource ds = new JdbcDataSource(); // прямая зависимость
-}
+Изолируй потенциально изменяемые участки стабильными абстракциями.  
+Предусмотри вариативность _заранее_ — как архитектурную страховку.
 
-// Низкая связанность — через абстракцию
-class Report {
-    private final DataSource ds;
-    Report(DataSource ds) { this.ds = ds; } // подставим любую реализацию
-}
-```
+|Область|Пример|
+|---|---|
+|DDD|Репозиторий защищает доменную модель от изменений в БД|
+|Hexagonal Architecture|Адаптеры защищают ядро от API, UI, брокеров|
+|Чистая архитектура|Внешние слои зависят от внутренних через интерфейсы|
 
-### High Cohesion
+> Protected Variations не про классы — а про **архитектурное мышление**:  
+> — Где система нестабильна?  
+> — Где точка потенциальной замены?  
+> — Как изолировать важное от хрупкого?
 
-Класс должен быть сфокусирован на одной задаче. Высокая сплочённость облегчает понимание и переиспользование.
+#### Источники:
+https://habr.com/ru/articles/900140/
+https://www.youtube.com/watch?v=zf2A_xSNhvM&t=192s
 
-```java
-// Низкая сплочённость — один класс делает всё (God Object)
-class GodService {
-    void createUser() { ... }
-    void sendEmail() { ... }
-    void generateReport() { ... }
-}
-
-// Высокая сплочённость — разделение
-class UserService { void createUser() { ... } }
-class EmailService { void sendEmail() { ... } }
-class ReportService { void generateReport() { ... } }
-```
-
-### Polymorphism
-
-Вариативность поведения реализуется через полиморфизм (интерфейсы/наследование), а не через `if/switch` по типу.
-
-```java
-// Нарушение
-double area(Shape s) {
-    if (s instanceof Circle) return Math.PI * r * r;
-    else if (s instanceof Square) return side * side;
-}
-
-// Соблюдение
-interface Shape { double area(); }
-class Circle implements Shape { public double area() { ... } }
-```
-
-### Pure Fabrication
-
-Искусственный класс, не имеющий аналога в предметной области, вводимый для снижения связанности (например, `Repository` или `Mapper`).
-
-```java
-// PaymentRepository — нет в домене, добавлен ради separation of concerns
-public interface PaymentRepository { // Pure Fabrication
-    void save(Payment p);
-}
-public class JdbcPaymentRepository implements PaymentRepository { ... }
-```
-
-### Indirection
-
-Введение промежуточного слоя для снижения связанности между компонентами (например, `Service` между `Controller` и `Repository`).
-
-```java
-// Indirection — Service изолирует Controller от Repository и Domain Logic
-class OrderController {
-    private final OrderService service; // слой Indirection
-}
-class OrderService {
-    private final OrderRepository repo; // ещё один слой Indirection
-}
-```
-
-### Protected Variations
-
-Защита от изменений через интерфейсы и абстракции: точки нестабильности скрываются за стабильной абстракцией.
-
-```java
-// Protected Variations — стабильный интерфейс PaymentGateway
-// скрывает вариации провайдеров (Stripe, PayPal)
-interface PaymentGateway { void charge(Payment p); }
-
-class StripeGateway implements PaymentGateway { ... }
-class PayPalGateway implements PaymentGateway { ... }
-// Смена провайдера не затрагивает вызывающий код
-```
-
-## Связь с другими парадигмами
-
-GRASP тесно связано с принципами [[SOLID]] (особенно SRP ↔ High Cohesion, Low Coupling ↔ OCP/DIP) и находит практическое применение в [[DI]].
-
-friend:: [[SOLID]]
-friend:: [[DI]]
+#### Связи:
+friend::[[Domain-Driven Design]]
