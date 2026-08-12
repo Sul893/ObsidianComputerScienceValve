@@ -4,7 +4,7 @@ tags: [spring, springmvc]
 
 # ApplicationContext
 
-**`ApplicationContext`** — интерфейс Spring, реализация [[IoC Container]]. Центральный механизм DI: создаёт, связывает и управляет бинами. Расширяет интерфейс `BeanFactory`, добавляя: поддержку [скоупов](IoC%20Container#Скоупы%20(области%20видимости)), событий (`ApplicationEvent`), интернационализации (`MessageSource`), загрузки ресурсов (`ResourceLoader`) и аннотаций `@PostConstruct`, `@Autowired`.
+**`ApplicationContext`** — интерфейс Spring, реализация [[IoC Container]]. Центральный механизм DI: создаёт, связывает и управляет бинами. Расширяет интерфейс `BeanFactory`, добавляя: поддержку [скоупов](IoC%20Container.md#Скоупы%20(области%20видимости)), событий (`ApplicationEvent`), интернационализации (`MessageSource`), загрузки ресурсов (`ResourceLoader`) и аннотаций `@PostConstruct`, `@Autowired`.
 
 ## Иерархия интерфейсов
 
