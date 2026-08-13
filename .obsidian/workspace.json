@@ -13,15 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/Architect/Domain-Driven-Design/Domain-Driven Design.md",
+                "file": "SDLC/SDLC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Domain-Driven Design"
+              "title": "SDLC"
+            }
+          },
+          {
+            "id": "da0e39a1faa0f3f3",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "SDLC/Images/Pasted image 20260813184756.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260813184756"
+            }
+          },
+          {
+            "id": "f135e264e4eb07bd",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "SDLC/Images/Pasted image 20260813185632.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260813185632"
+            }
+          },
+          {
+            "id": "f37290a05e6859e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SDLC/SDLC.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SDLC"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -186,23 +225,33 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "b9990b03cd547785",
+  "active": "caecb4aea67d821b",
   "lastOpenFiles": [
+    "SDLC/Images/Pasted image 20260813191044.png",
+    "SDLC/Images/Pasted image 20260813185854.png",
+    "SDLC/Images/Pasted image 20260813185632.png",
+    "SDLC/Images/Pasted image 20260813184756.png",
+    "SDLC/SDLC.md",
+    "SDLC/Images",
+    "SDLC/Images/Pasted image 20260813190917.png",
+    "SDLC/Images/Pasted image 20260813190524.png",
+    "SDLC/Images/Pasted image 20260813190218.png",
+    "CS/Architect/IoC/Dependency Injection.md",
+    "SDLC",
+    "CS/Architect/IoC/Flow of control.md",
+    "CS/Architect/IoC/IoC.md",
+    "CS/Architect/IoC/IoC Container.md",
+    "CS/Architect/IoC/IoC1.excalidraw.md",
+    "CS/Architect/IoC/IoC2.excalidraw.md",
+    "CS/Architect/IoC/IoC3.excalidraw.md",
+    "CS/Architect/IoC/Service Locator.md",
+    "IoC Container.md",
+    "CS/Architect/Domain-Driven-Design/Domain-Driven Design.md",
     "Images/viewpoint.png",
     "Images/Pasted image 20260807141732.png",
     "Images/Pasted image 20260807133940.png",
     "Images/Pasted image 20260807133931.png",
-    "Images/Pasted image 20260807133851.png",
-    "Images/Pasted image 20260807133834.png",
-    "Images/Pasted image 20260807133820.png",
-    "Images/Pasted image 20260807133746.png",
-    "Images/Pasted image 20260807133657.png",
-    "Images/Pasted image 20260807133637.png",
-    "Images/Pasted image 20260807125446.png",
     "Images",
-    "CS/Architect/IoC/IoC Container.md",
-    "CS/Architect/IoC/IoC.md",
-    "CS/Architect/IoC/Dependency Injection.md",
     "CS/Spring/SpringSecurity/AuthProvider.md",
     "CS/Spring/SpringSecurity/AuthManager.md",
     "CS/Architect/Handler.md",
@@ -213,18 +262,10 @@
     "CS/Architect/Entry-point.excalidraw.md",
     "CS/Architect/UML/Component diagram.md",
     "CS/Architect/UML/Class diagram.md",
-    "CS/Architect/IoC/Service Locator.md",
-    "CS/Architect/IoC/IoC2.excalidraw.md",
-    "CS/Architect/IoC/IoC3.excalidraw.md",
     "CS/Architect/IoC/IoC3.md",
     "Excalidraw/Drawing 2026-08-12 12.18.06_1.excalidraw.md",
     "Excalidraw/Drawing 2026-08-12 12.18.06_0.excalidraw.md",
     "Excalidraw/Drawing 2026-08-12 12.18.06.excalidraw.md",
-    "Excalidraw/Drawing 2026-08-12 12.18.03.excalidraw.md",
-    "CS/Spring/SpringMVC/DispatcherServlet/DispatcherServlet.md",
-    "CS/Architect/SOLID/SOLID.md",
-    "CS/Architect/SOLID/Dependency Inversion Principle.md",
-    "CS/Spring/SpringSecurity/Principal.md",
     "Excalidraw/Libraries/system-design.excalidrawlib",
     "Excalidraw/Libraries/stick-figures.excalidrawlib",
     "Excalidraw/Libraries/UML-ER-library.excalidrawlib",
@@ -232,8 +273,6 @@
     "Excalidraw/Libraries/forms.excalidrawlib",
     "Excalidraw/Libraries/system-design-template.excalidrawlib",
     "Excalidraw/Libraries/network-topology-icons.excalidrawlib",
-    "Excalidraw/Libraries/software-architecture.excalidrawlib",
-    "Excalidraw/Libraries",
     "CS/Untitled.canvas"
   ]
 }
