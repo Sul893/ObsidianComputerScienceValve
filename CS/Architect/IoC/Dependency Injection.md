@@ -63,11 +63,31 @@ class MyComponent{
 
 Вообще как можно было догадаться, DI - это реализация [[IoC]] и для его работы необходим какой-то финальный корневой класс, в котором расписаны все зависимости - [[Composition Root]]
 
+
 ![[IoC2.excalidraw]]
 
 (Слева граф зависимостей - справа использование)
 
 В [[Composition Root]] определяются все связи, внедряются все зависимости и происходит общая инициализация.
+Фреймворки по-разному его реализуют. вот самая примитивная реализация:
+
+```java
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Composition Root начинается здесь
+        var connectionString = Configuration.GetConnectionString("Default");
+        var repository = new SqlUserRepository(connectionString);
+        var userService = new UserService(repository);
+        var controller = new HomeController(userService);
+        
+        // Запускаем приложение, передавая готовый граф
+        var app = new ConsoleApp(controller);
+        app.Run();
+    }
+}
+```
 
 parent::[[IoC]]
 friend::[[Composition Root]]
