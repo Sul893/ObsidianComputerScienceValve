@@ -4,7 +4,7 @@ tags: [spring, security]
 
 # DelegatingFilterProxy
 
-**`DelegatingFilterProxy`** — сервлетный фильтр (`jakarta.servlet.Filter`) из Spring Framework, являющийся связующим звеном между [[ServletContainer]] ([[Apache Tomcat]]) и [[ApplicationContext]] Spring.
+**`DelegatingFilterProxy`** — сервлетный фильтр (`jakarta.servlet.Filter`) из Spring Framework, являющийся связующим звеном между [[Web Container]] ([[Apache Tomcat]]) и [[ApplicationContext]] Spring.
 
 ## Зачем нужен
 
@@ -88,6 +88,6 @@ public class SecurityConfig {
 
 friend:: [[ServletContext]]
 friend:: [[ApplicationContext]]
-friend:: [[ServletContainer]]
+friend:: [[Web Container]]
 friend:: [[FilterChainProxy]]
 parent:: [[Servlet filter]]

@@ -4,7 +4,7 @@ tags: [spring, springmvc, web]
 
 # DispatcherServlet
 
-**`DispatcherServlet`** — центральный [[Servlet]] в Spring MVC, единая точка входа ("Front Controller"). [[Apache Tomcat]] ([[ServletContainer]]) создаёт его при инициализации приложения и регистрирует как обычный сервлет.
+**`DispatcherServlet`** — центральный [[Servlet]] в Spring MVC, единая точка входа ("Front Controller"). [[Apache Tomcat]] ([[Web Container]]) создаёт его при инициализации приложения и регистрирует как обычный сервлет.
 
 ## Роль
 
@@ -111,7 +111,7 @@ friend:: [[ViewResolver]]
 friend:: [[Servlet WebApplicationContext]]
 friend:: [[Root WebApplicationContext]]
 friend:: [[Apache Tomcat]]
-friend:: [[ServletContainer]]
+friend:: [[Web Container]]
 friend:: [[Socket]]
 friend:: [[@RequestMapping]]
 friend:: [[Handle Object]]

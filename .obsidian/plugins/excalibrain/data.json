@@ -228,13 +228,20 @@
   },
   "navigationHistory": [
     "CS/Img/Servlet/Pasted image 20260609121341.png",
-    "CS/WEB/Servlet/Apache Tomcat.md",
     "CS/Architect/SOLID/Dependency Inversion Principle.md",
     "CS/Architect/IoC Container.md",
     "CS/Spring/SpringMVC/ApplicationContext.md",
     "folder:CS/Architect",
     "CS/Architect/DI.md",
-    "CS/Architect/IoC.md"
+    "CS/Architect/IoC.md",
+    "CS/Core/Software-System/Software System.md",
+    "CS/Core/Software-System/Software-intensive systems.md",
+    "CS/Img/Web-Based System.md",
+    "CS/WEB/Protocols/Communication protocol.md",
+    "CS/WEB/Servlet/Apache Tomcat.md",
+    "CS/WEB/Core/Web Server.md",
+    "CS/WEB/Servlet/Web Container.md",
+    "CS/WEB/Core/Application server.md"
   ],
   "allowOntologySuggester": true,
   "ontologySuggesterParentTrigger": "::p",

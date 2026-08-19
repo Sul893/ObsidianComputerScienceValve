@@ -4,7 +4,7 @@ tags: [web, servlet]
 
 # ServletContext
 
-**ServletContext** — общее контекстное окружение для всех [[Servlet]] одного веб-приложения, предоставляемое [[Apache Tomcat]] ([[ServletContainer]]).
+**ServletContext** — общее контекстное окружение для всех [[Servlet]] одного веб-приложения, предоставляемое [[Apache Tomcat]] ([[Web Container]]).
 
 Один `ServletContext` = одно веб-приложение (WAR). Все сервлеты приложения делят один контекст.
 
@@ -79,4 +79,4 @@ public void contextInitialized(ServletContextEvent e) {
 
 friend:: [[Apache Tomcat]]
 friend:: [[Servlet]]
-friend:: [[ServletContainer]]
+friend:: [[Web Container]]

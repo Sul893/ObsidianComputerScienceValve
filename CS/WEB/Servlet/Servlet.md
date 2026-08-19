@@ -10,7 +10,7 @@ tags: [web]
 
 ## Жизненный цикл
 
-Управляется контейнером сервлетов [[Apache Tomcat]] ([[ServletContainer]]). Жизненный цикл состоит из трёх фаз:
+Управляется контейнером сервлетов [[Apache Tomcat]] ([[Web Container]]). Жизненный цикл состоит из трёх фаз:
 
 1. **`init()`** — инициализация. Вызывается контейнером один раз при загрузке сервлета. Здесь выполняется настройка ресурсов.
 2. **`service()`** — обработка запросов. Вызывается для каждого HTTP-запроса. Метод разбирает HTTP-метод (GET, POST, …) и делегирует в `doGet()`, `doPost()` и т.д.
@@ -98,4 +98,4 @@ friend:: [[Apache Tomcat]]
 friend:: [[ServletContext]]
 friend:: [[Socket]]
 friend:: [[Servlet filter]]
-friend:: [[ServletContainer]]
+friend:: [[Web Container]]

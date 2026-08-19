@@ -4,7 +4,7 @@ tags: [spring, springmvc, web]
 
 # ContextLoaderListener
 
-**`ContextLoaderListener`** — `ServletContextListener`, который [[Apache Tomcat]] ([[ServletContainer]]) запускает при инициализации веб-приложения (до того, как создаются сервлеты).
+**`ContextLoaderListener`** — `ServletContextListener`, который [[Apache Tomcat]] ([[Web Container]]) запускает при инициализации веб-приложения (до того, как создаются сервлеты).
 
 ## Что делает
 
@@ -81,7 +81,7 @@ friend:: [[Apache Tomcat]]
 friend:: [[Root WebApplicationContext]]
 friend:: [[ServletContext]]
 friend:: [[ApplicationContext]]
-friend:: [[ServletContainer]]
+friend:: [[Web Container]]
 friend:: [[RootConfigurer]]
 friend:: [[@Configuration]]
 friend:: [[@ComponentScan]]

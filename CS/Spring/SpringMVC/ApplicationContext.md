@@ -27,7 +27,7 @@ Spring MVC использует двухуровневую иерархию ко
 - **[[Root WebApplicationContext]]** — родительский контекст. Содержит сервисы, репозитории, инфраструктуру, общий для всего приложения.
 - **[[Servlet WebApplicationContext]]** — дочерний контекст на каждый [[DispatcherServlet]]. Содержит веб-компоненты: контроллеры, handler mappings, view resolvers. Может обращаться к бинам родителя, но не наоборот.
 
-Создаётся через [[ContextLoaderListener]] при старте [[Apache Tomcat]] ([[ServletContainer]]).
+Создаётся через [[ContextLoaderListener]] при старте [[Apache Tomcat]] ([[Web Container]]).
 
 ## Связь с ServletContext
 
@@ -86,5 +86,5 @@ friend:: [[Root WebApplicationContext]]
 friend:: [[Servlet WebApplicationContext]]
 friend:: [[DispatcherServlet]]
 friend:: [[Apache Tomcat]]
-friend:: [[ServletContainer]]
+friend:: [[Web Container]]
 parent:: [[IoC Container]]

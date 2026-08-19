@@ -31,7 +31,7 @@ Root WebApplicationContext (сервисы, репозитории, security)
 
 ## Создание
 
-Создаётся [[ContextLoaderListener]] при запуске [[Apache Tomcat]] ([[ServletContainer]]). Инициализация происходит раньше, чем создание [[DispatcherServlet]].
+Создаётся [[ContextLoaderListener]] при запуске [[Apache Tomcat]] ([[Web Container]]). Инициализация происходит раньше, чем создание [[DispatcherServlet]].
 
 ```java
 // WebApplicationInitializer
@@ -64,7 +64,7 @@ friend:: [[RootConfigurer]]
 friend:: [[Servlet WebApplicationContext]]
 friend:: [[DispatcherServlet]]
 friend:: [[Apache Tomcat]]
-friend:: [[ServletContainer]]
+friend:: [[Web Container]]
 friend:: [[@ComponentScan]]
 friend:: [[@Configuration]]
 friend:: [[ViewResolver]]

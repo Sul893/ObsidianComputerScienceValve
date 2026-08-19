@@ -4,7 +4,7 @@ tags: [web, servlet]
 
 # Servlet Filter
 
-**Servlet Filter** — фильтр, выполняющий пред- и пост-обработку HTTP-запросов перед тем, как они попадут в [[Servlet]] (и после обработки сервлетом). Работает на уровне [[Apache Tomcat]] ([[ServletContainer]]) — ниже уровня сервлетов.
+**Servlet Filter** — фильтр, выполняющий пред- и пост-обработку HTTP-запросов перед тем, как они попадут в [[Servlet]] (и после обработки сервлетом). Работает на уровне [[Apache Tomcat]] ([[Web Container]]) — ниже уровня сервлетов.
 
 Интерфейс: `jakarta.servlet.Filter`, жизненный цикл `init()` → `doFilter()` → `destroy()`.
 
@@ -111,5 +111,5 @@ MVC-фреймворки ( поверх контейнера сервлетов)
 | Время вызова | до сервлета | после выбора handler'а |
 
 friend:: [[Apache Tomcat]]
-friend:: [[ServletContainer]]
+friend:: [[Web Container]]
 friend:: [[Servlet]]
